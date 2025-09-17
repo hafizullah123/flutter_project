@@ -12,7 +12,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'اپلیکیشن درمان',
-      theme: ThemeData(primarySwatch: Colors.blue, fontFamily: 'Roboto'),
+      theme: ThemeData(
+        primaryColor: const Color(0xFF1DC39D), // ✅ رنگ اصلی سبز
+        fontFamily: 'Roboto',
+      ),
+
       home: const Directionality(
         textDirection: TextDirection.rtl, // 🔹 راست به چپ
         child: PolicyPage(),
@@ -31,7 +35,7 @@ class PolicyPage extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.grey[100],
         appBar: AppBar(
-          backgroundColor: Colors.blue.shade700,
+          backgroundColor: const Color(0xFF1DC39D), // ✅ سبز سفارشی
           title: const Text(
             "اپلیکیشن درمان",
             style: TextStyle(fontWeight: FontWeight.bold),
